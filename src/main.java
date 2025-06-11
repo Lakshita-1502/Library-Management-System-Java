@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Scanner;
 import src.books.*;
-import src.addUser;
-import src.viewUser;
-import src.updateUser;
+import src.issues.returnBook;
+import src.users.*;
+import src.issues.issueBook;
 
 public class main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -61,7 +61,8 @@ public class main {
                         "1. Add User\n" +
                         "2. View User\n" +
                         "3. Update User information\n" +
-                        "4. Delete User\n");
+                        "4. Delete User\n" +
+                        "5. Search a User");
                 System.out.println("Please enter your option number: ");
                 option=sc.nextInt();
                 switch(option) {
@@ -75,6 +76,10 @@ public class main {
                         updateUser.getUpdateDetails();
                         break;
                     case 4:
+                        deleteUser.getDeleteDetails();
+                        break;
+                    case 5:
+                        searchUser.getSearchDetails();
                         break;
                     default:
                         System.out.println("Please enter a valid option!");
@@ -88,8 +93,10 @@ public class main {
                 option=sc.nextInt();
                 switch(option) {
                     case 1:
+                        issueBook.getIssueDetails();
                         break;
                     case 2:
+                        returnBook.getReturnDetails();
                         break;
                     default:
                         System.out.println("Please enter a valid option!");

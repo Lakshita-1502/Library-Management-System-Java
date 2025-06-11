@@ -1,4 +1,4 @@
-package src;
+package src.users;
 
 import src.DBConnection;
 import java.sql.Connection;

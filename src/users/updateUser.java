@@ -1,6 +1,7 @@
-package src;
+package src.users;
 
 import src.DBConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

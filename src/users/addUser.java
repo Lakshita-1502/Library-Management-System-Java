@@ -1,4 +1,6 @@
-package src;
+package src.users;
+
+import src.DBConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +12,7 @@ public class addUser {
         Scanner sc = new Scanner(System.in);
         Connection con=null;
         try{
-            con=DBConnection.getConnection();
+            con= DBConnection.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

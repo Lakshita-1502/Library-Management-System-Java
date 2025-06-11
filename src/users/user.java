@@ -1,4 +1,4 @@
-package src;
+package src.users;
 
 public class user {
     private int uid;
@@ -7,7 +7,7 @@ public class user {
     private String address;
 
     public user(){
-        this.uid = 0;
+        this.uid = -1;
         this.uname = "";
         this.contact = "";
         this.address = "";
@@ -23,7 +23,7 @@ public class user {
     public int getUid() {
         return uid;
     }
-    public void setUid(int user_id) {
+    public void setUid(int uid) {
         this.uid = uid;
     }
 
