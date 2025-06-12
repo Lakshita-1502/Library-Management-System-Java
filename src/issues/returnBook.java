@@ -1,7 +1,6 @@
 package src.issues;
 
 import src.DBConnection;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -15,7 +14,8 @@ public class returnBook {
         try{
             con= DBConnection.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
 
         System.out.println("Enter Issue ID whose book returned:- ");
@@ -39,7 +39,8 @@ public class returnBook {
             pst.executeUpdate();
             System.out.println("Book Returned successfully");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

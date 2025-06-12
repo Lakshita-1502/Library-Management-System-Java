@@ -1,7 +1,6 @@
 package src.users;
 
 import src.DBConnection;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,7 +13,8 @@ public class addUser {
         try{
             con= DBConnection.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
 
         System.out.println("Enter User Id:- ");
@@ -45,7 +45,8 @@ public class addUser {
             ps.executeUpdate();
             System.out.println("User Added Successfully");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

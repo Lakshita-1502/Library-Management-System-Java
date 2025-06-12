@@ -15,7 +15,8 @@ public class searchBook {
         try{
             con= DBConnection.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
 
         System.out.println("Enter Book ID to search:- ");
@@ -39,7 +40,8 @@ public class searchBook {
                 System.out.println("Book total no. of pages:- "+rs.getInt(5));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

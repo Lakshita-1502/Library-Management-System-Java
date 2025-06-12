@@ -14,7 +14,8 @@ public class deleteBook {
         try{
             con= DBConnection.getConnection();
 ;        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
 
         System.out.println("Enter Book ID you want to delete:- ");
@@ -33,7 +34,8 @@ public class deleteBook {
             ps.executeUpdate();
             System.out.println("Book deleted successfully");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

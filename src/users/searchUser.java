@@ -1,7 +1,6 @@
 package src.users;
 
 import src.DBConnection;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +15,8 @@ public class searchUser {
         try{
             con=DBConnection.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
 
         System.out.println("Enter User ID you want to search:- ");
@@ -39,7 +39,8 @@ public class searchUser {
                 System.out.println("User Address:- "+rs.getString(4));
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

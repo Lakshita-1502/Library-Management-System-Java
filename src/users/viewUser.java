@@ -20,7 +20,8 @@ public class viewUser {
                 System.out.println("User Address:- "+rs.getString(4));
             }
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

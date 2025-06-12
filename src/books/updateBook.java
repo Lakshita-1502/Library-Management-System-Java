@@ -14,7 +14,8 @@ public class updateBook {
         try{
             con= DBConnection.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
 
         System.out.println("Enter Book ID:- ");
@@ -65,7 +66,8 @@ public class updateBook {
             ps.executeUpdate();
             System.out.println("Book Name Updated");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 
@@ -78,7 +80,8 @@ public class updateBook {
             ps.executeUpdate();
             System.out.println("Author Name Updated");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 
@@ -91,7 +94,8 @@ public class updateBook {
             ps.executeUpdate();
             System.out.println("Publisher Name Updated");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 
@@ -104,7 +108,8 @@ public class updateBook {
             ps.executeUpdate();
             System.out.println("Page Count Updated");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }

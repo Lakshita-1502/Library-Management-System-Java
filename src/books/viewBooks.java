@@ -21,7 +21,8 @@ public class viewBooks {
                 System.out.println("Book total no. of pages:- "+rs.getInt(5));
             }
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Exception caught");
+            System.exit(1);
         }
     }
 }
